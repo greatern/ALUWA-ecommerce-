@@ -1,0 +1,668 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C98B4127-F0FC-42B9-929E-D5A56DD6C7AF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aluwa3</RootNamespace>
+    <AssemblyName>Aluwa3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.html" />
+    <Content Include="AboutProduct.aspx" />
+    <Content Include="AddProducts.aspx" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\css\bootstrap.min.css" />
+    <Content Include="assets\css\css\style.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\04237 Seed Bands 600 %281%29.jpeg" />
+    <Content Include="assets\img\04237 Seed Bands 600.jpeg" />
+    <Content Include="assets\img\Bean seed germinating stock image_ Image of spring, shoot - 4316533.jpeg" />
+    <Content Include="assets\img\blog\blog-1.jpg" />
+    <Content Include="assets\img\blog\blog-2.jpg" />
+    <Content Include="assets\img\blog\blog-3.jpg" />
+    <Content Include="assets\img\blog\blog-4.jpg" />
+    <Content Include="assets\img\blog\blog-5.jpg" />
+    <Content Include="assets\img\blog\blog-6.jpg" />
+    <Content Include="assets\img\blog\blog-author.jpg" />
+    <Content Include="assets\img\blog\blog-inside-post.jpg" />
+    <Content Include="assets\img\blog\blog-recent-1.jpg" />
+    <Content Include="assets\img\blog\blog-recent-2.jpg" />
+    <Content Include="assets\img\blog\blog-recent-3.jpg" />
+    <Content Include="assets\img\blog\blog-recent-4.jpg" />
+    <Content Include="assets\img\blog\blog-recent-5.jpg" />
+    <Content Include="assets\img\blog\comments-1.jpg" />
+    <Content Include="assets\img\blog\comments-2.jpg" />
+    <Content Include="assets\img\blog\comments-3.jpg" />
+    <Content Include="assets\img\blog\comments-4.jpg" />
+    <Content Include="assets\img\blog\comments-5.jpg" />
+    <Content Include="assets\img\blog\comments-6.jpg" />
+    <Content Include="assets\img\Coriander Powder _ Ground Coriander %28Dhaniya Powder%29 %281%29.jpeg" />
+    <Content Include="assets\img\Farmers are watering seedlings on bl stock photo containing young and small.jpeg" />
+    <Content Include="assets\img\Free Vector _ Oatmeal milk realistic poster as advertising illustration of original organic product without dairy and sugar  illustration.jpeg" />
+    <Content Include="assets\img\greenbackgroundlogo.jpg" />
+    <Content Include="assets\img\hero_2.jpg" />
+    <Content Include="assets\img\hero_4.jpg" />
+    <Content Include="assets\img\How To Plant And Grow Sunflowers - 6 Great Varieties To Rock Your Landscape!.jpeg" />
+    <Content Include="assets\img\How to use nutrients and fertilizers to grow marijuana plants.jpeg" />
+    <Content Include="assets\img\I chose this image because Winnie hates being proper and would rather play in the dirt_.jpeg" />
+    <Content Include="assets\img\IMG-20240810-WA0002.jpg" />
+    <Content Include="assets\img\IMG-20240810-WA0003.jpg" />
+    <Content Include="assets\img\IMG-20240810-WA0004.jpg" />
+    <Content Include="assets\img\IMG-20240810-WA0005.jpg" />
+    <Content Include="assets\img\img_long_5.jpg" />
+    <Content Include="assets\img\img_sq_1.jpg" />
+    <Content Include="assets\img\img_sq_3.jpg" />
+    <Content Include="assets\img\img_sq_4.jpg" />
+    <Content Include="assets\img\img_sq_5.jpg" />
+    <Content Include="assets\img\img_sq_6.jpg" />
+    <Content Include="assets\img\img_sq_8.jpg" />
+    <Content Include="assets\img\LE COQUET Indoor Planter - Bois _ 3 _ Avec trous + soucoupe %281%29.jpeg" />
+    <Content Include="assets\img\LOGO NO BACKGROUND.jpg" />
+    <Content Include="assets\img\logo.jpg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\Planting The Seed.jpeg" />
+    <Content Include="assets\img\Premium Photo _ Corn sapling growing with technology icons around it cultivation concept and technology.jpeg" />
+    <Content Include="assets\img\team\team-1.jpg" />
+    <Content Include="assets\img\team\team-2.jpg" />
+    <Content Include="assets\img\team\team-3.jpg" />
+    <Content Include="assets\img\team\team-4.jpg" />
+    <Content Include="assets\img\testimonials\3cb09935-aa81-47c1-9886-948a342c4575.jpeg" />
+    <Content Include="assets\img\testimonials\Actor Headshot.jpeg" />
+    <Content Include="assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="assets\img\testimonials\Thuso Mbedu.jpeg" />
+    <Content Include="assets\img\We Explain What 10-10-10 Fertilizer Is and How to Use It in Your Garden.jpeg" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\productmain.js" />
+    <Content Include="assets\productIMG\carrot seeds.jpg" />
+    <Content Include="assets\productIMG\e8d81d5a-42a7-4ccc-bd82-fb3f4eff11e4.jpeg" />
+    <Content Include="assets\productIMG\Grow your first bonsai from seed - Gardening Site.jpeg" />
+    <Content Include="assets\productIMG\In Appalachia, a plan to save wild ginseng.jpeg" />
+    <Content Include="assets\productIMG\LE COQUET Indoor Planter - Bois _ 3 _ Avec trous + soucoupe.jpeg" />
+    <Content Include="assets\productIMG\Lovely Arum lilies.jpeg" />
+    <Content Include="assets\productIMG\Plants.jpeg" />
+    <Content Include="assets\productIMG\The Last Cosmos.jpeg" />
+    <Content Include="assets\scss\Readme.txt" />
+    <Content Include="assets\vendor\aos\aos.cjs.js" />
+    <Content Include="assets\vendor\aos\aos.css" />
+    <Content Include="assets\vendor\aos\aos.esm.js" />
+    <Content Include="assets\vendor\aos\aos.js" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="bin\Aluwa3.dll" />
+    <Content Include="bin\Aluwa3.pdb" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Cart.aspx" />
+    <Content Include="bin\Aluwa3.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Invoice.aspx" />
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.GetProductByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.TempCart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.TempCartProd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.TempProd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Aluwa3.ServiceReference1.TempOrderProd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference1\Service1.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="contact.html" />
+    <Content Include="Logout.aspx" />
+    <Content Include="DeleteProduct.aspx" />
+    <Content Include="EditProduct.aspx" />
+    <Content Include="forms\contact.php" />
+    <Content Include="forms\newsletter.php" />
+    <Content Include="forms\Readme.txt" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\hero_3.jpg" />
+    <Content Include="images\hero_4.jpg" />
+    <Content Include="images\How To Plant And Grow Sunflowers - 6 Great Varieties To Rock Your Landscape!.jpeg" />
+    <Content Include="images\img_long_5.jpg" />
+    <Content Include="images\img_sq_1.jpg" />
+    <Content Include="images\img_sq_3.jpg" />
+    <Content Include="images\img_sq_4.jpg" />
+    <Content Include="images\img_sq_5.jpg" />
+    <Content Include="images\img_sq_6.jpg" />
+    <Content Include="images\img_sq_8.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\shopping-cart.svg" />
+    <Content Include="img\avatar.jpg" />
+    <Content Include="img\baner-1.png" />
+    <Content Include="img\banner-fruits.jpg" />
+    <Content Include="img\best-product-1.jpg" />
+    <Content Include="img\best-product-2.jpg" />
+    <Content Include="img\best-product-3.jpg" />
+    <Content Include="img\best-product-4.jpg" />
+    <Content Include="img\best-product-5.jpg" />
+    <Content Include="img\best-product-6.jpg" />
+    <Content Include="img\cart-page-header-img.jpg" />
+    <Content Include="img\featur-1.jpg" />
+    <Content Include="img\featur-2.jpg" />
+    <Content Include="img\featur-3.jpg" />
+    <Content Include="img\fruite-item-1.jpg" />
+    <Content Include="img\fruite-item-2.jpg" />
+    <Content Include="img\fruite-item-3.jpg" />
+    <Content Include="img\fruite-item-4.jpg" />
+    <Content Include="img\fruite-item-5.jpg" />
+    <Content Include="img\fruite-item-6.jpg" />
+    <Content Include="img\hero-img-1.png" />
+    <Content Include="img\hero-img-2.jpg" />
+    <Content Include="img\hero-img.jpg" />
+    <Content Include="img\payment.png" />
+    <Content Include="img\single-item.jpg" />
+    <Content Include="img\testimonial-1.jpg" />
+    <Content Include="img\vegetable-item-1.jpg" />
+    <Content Include="img\vegetable-item-2.jpg" />
+    <Content Include="img\vegetable-item-3.png" />
+    <Content Include="img\vegetable-item-4.jpg" />
+    <Content Include="img\vegetable-item-5.jpg" />
+    <Content Include="img\vegetable-item-6.jpg" />
+    <Content Include="lib\easing\easing.js" />
+    <Content Include="lib\easing\easing.min.js" />
+    <Content Include="lib\lightbox\css\lightbox.min.css" />
+    <Content Include="lib\lightbox\images\close.png" />
+    <Content Include="lib\lightbox\images\loading.gif" />
+    <Content Include="lib\lightbox\images\next.png" />
+    <Content Include="lib\lightbox\images\prev.png" />
+    <Content Include="lib\lightbox\js\lightbox.min.js" />
+    <Content Include="lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="lib\owlcarousel\owl.carousel.js" />
+    <Content Include="lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="lib\waypoints\links.php" />
+    <Content Include="lib\waypoints\waypoints.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="obj\Debug\Aluwa2.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\Connected Services.ServiceReference1.Reference.cs.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="Product.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RemoveUser.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutProduct.aspx.cs">
+      <DependentUpon>AboutProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutProduct.aspx.designer.cs">
+      <DependentUpon>AboutProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddProducts.aspx.cs">
+      <DependentUpon>AddProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProducts.aspx.designer.cs">
+      <DependentUpon>AddProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AluwaMaster.Master.cs">
+      <DependentUpon>AluwaMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AluwaMaster.Master.designer.cs">
+      <DependentUpon>AluwaMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveUser.aspx.cs">
+      <DependentUpon>RemoveUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveUser.aspx.designer.cs">
+      <DependentUpon>RemoveUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secrecy.cs" />
+    <Compile Include="DeleteProduct.aspx.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteProduct.aspx.designer.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css.zip" />
+    <Content Include="assets\img\page-title-bg.webp" />
+    <Content Include="assets\vendor\aos\aos.js.map" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <Content Include="images\page-title-bg.webp" />
+    <Content Include="obj\Debug\Aluwa2.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Aluwa3.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Tsc2f61b7ad.out" />
+    <Content Include="AluwaMaster.Master" />
+    <Content Include="lib\owlcarousel\LICENSE" />
+    <None Include="Connected Services\ServiceReference1\Service1.wsdl" />
+    <None Include="Connected Services\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63405</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2204/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

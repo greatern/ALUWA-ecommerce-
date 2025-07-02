@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Aluwa" Class="AluwaClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Aluwa.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AluwaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="User_Surname" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRole" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="User_Cart" Member="Carts" ThisKey="User_Id" OtherKey="User_Id" Type="Cart" />
+      <Association Name="User_Order" Member="Orders" ThisKey="User_Id" OtherKey="User_Id" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cart" Member="Carts">
+    <Type Name="Cart">
+      <Column Name="Cart_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cart_Total" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CartProduct_Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Cart_Cart_Product" Member="Cart_Products" ThisKey="Cart_Id" OtherKey="Cart_Id" Type="Cart_Product" />
+      <Association Name="User_Cart" Member="User" ThisKey="User_Id" OtherKey="User_Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cart_Product" Member="Cart_Products">
+    <Type Name="Cart_Product">
+      <Column Name="CartProd_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CartProd_Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cart_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Prod_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Cart_Cart_Product" Member="Cart" ThisKey="Cart_Id" OtherKey="Cart_Id" Type="Cart" IsForeignKey="true" />
+      <Association Name="Product_Cart_Product" Member="Product" ThisKey="Prod_Id" OtherKey="Prod_Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Order_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Order_Total" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Address" Type="System.String" DbType="VarChar(800)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Order_Order_Product" Member="Order_Products" ThisKey="Order_Id" OtherKey="Order_Id" Type="Order_Product" />
+      <Association Name="User_Order" Member="User" ThisKey="User_Id" OtherKey="User_Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Order_Product" Member="Order_Products">
+    <Type Name="Order_Product">
+      <Column Name="OrdProd_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProdPurchase_Price" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Order_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Prod_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Order_Order_Product" Member="Order" ThisKey="Order_Id" OtherKey="Order_Id" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_Order_Product" Member="Product" ThisKey="Prod_Id" OtherKey="Prod_Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="Prod_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Prod_Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Prod_Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductImage" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Maintenace" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Environment" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="Product_Cart_Product" Member="Cart_Products" ThisKey="Prod_Id" OtherKey="Prod_Id" Type="Cart_Product" />
+      <Association Name="Product_Order_Product" Member="Order_Products" ThisKey="Prod_Id" OtherKey="Prod_Id" Type="Order_Product" />
+    </Type>
+  </Table>
+</Database>

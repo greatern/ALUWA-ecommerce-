@@ -1,0 +1,14 @@
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\obj\Debug\Aluwa.csproj.AssemblyReference.cache
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\obj\Debug\Aluwa.csproj.CoreCompileInputs.cache
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\bin\Aluwa.dll.config
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\bin\Aluwa.dll
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\bin\Aluwa.pdb
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\obj\Debug\Aluwa.dll
+C:\Users\refil\OneDrive\Documents\2024_AcademicYear\Group_Project\Aluwa\obj\Debug\Aluwa.pdb
+C:\Users\alici\OneDrive\Desktop\Aluwa\bin\Aluwa.dll.config
+C:\Users\alici\OneDrive\Desktop\Aluwa\bin\Aluwa.dll
+C:\Users\alici\OneDrive\Desktop\Aluwa\bin\Aluwa.pdb
+C:\Users\alici\OneDrive\Desktop\Aluwa\obj\Debug\Aluwa.csproj.AssemblyReference.cache
+C:\Users\alici\OneDrive\Desktop\Aluwa\obj\Debug\Aluwa.csproj.CoreCompileInputs.cache
+C:\Users\alici\OneDrive\Desktop\Aluwa\obj\Debug\Aluwa.dll
+C:\Users\alici\OneDrive\Desktop\Aluwa\obj\Debug\Aluwa.pdb
